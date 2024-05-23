@@ -152,7 +152,7 @@ def contact(request):
         c=conta.objects.create(fullname=fullname, dob=dob, contactno=contactno, email=email, address=address, region=region, postalcode=postalcode)
         c.save()
         messages.success(request,'Registered Successfully.')
-        return redirect("finds")
+        return redirect("home")
     else:
         return render(request,"contact.html")   
         
